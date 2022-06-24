@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUM KIT</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2 >DRUM KIT</h2>
+    <section>
+        <div class="content">
+        Please press the keyboard keys to enjoy the drum beats....
+    </div></section>
+    <div class="boxes" >
+    <div class="box" data-key="65">
+        <kbd>A</kbd>
+        <span>Boom</span>
+    </div>
+    <div class="box"  data-key="66">
+        <kbd >B</kbd>
+        <span>Clap</span>
+    </div>
+    <div class="box" data-key="67">
+        <kbd>C</kbd >
+        <span>Hithat</span>
+    </div>
+    <div class="box" data-key="68">
+        <kbd>D</kbd >
+        <span>Kick</span>
+    </div>
+    <div class="box" data-key="69">
+        <kbd>E</kbd >
+        <span>Openhat</span>
+    </div>
+    <div class="box" data-key="70">
+        <kbd>F</kbd >
+        <span>Ride</span>
+    </div>
+    <div class="box" data-key="71">
+        <kbd>G</kbd >
+        <span>Snare</span>
+    </div>
+    <div class="box" data-key="72">
+        <kbd>H</kbd>
+        <span>Tink</span>
+    </div>
+    <div class="box" data-key="73">
+        <kbd>I</kbd>
+        <span>Tom</span>
+    </div>
+</div>
+<audio id="audio"data-key="65"src="boom.wav"></audio>
+<audio data-key="66"src="clap.wav"></audio>
+<audio data-key="67"src="hihat.wav"></audio>
+<audio data-key="68"src="kick.wav"></audio>
+<audio data-key="69"src="openhat.wav"></audio>
+<audio data-key="70"src="ride.wav"></audio>
+<audio data-key="71"src="snare.wav"></audio>
+<audio data-key="72"src="tink.wav"></audio>
+<audio data-key="73"src="tom.wav"></audio>
+<script >
+    window.addEventListener('keydown',(e)=>{
+    var audio=document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    var box=document.querySelector(`.box[data-key="${e.keyCode}"]`)
+    if(audio)
+    {
+        audio.play()
+        audio.currentTime=0
+        box.classList.add("playing")
+    }
+    return
+})
+    var a=document.querySelectorAll(".box")
+    a.forEach((e)=>{
+        e.addEventListener('transitionend',remove)
+    })
+    function remove(b){
+        if(b.propertyName="transform"){
+            this.classList.remove("playing")
+        }
+        return
+    }
+
+</script>
+</body>
+
+
+</html>
