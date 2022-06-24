@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    height:100vw;
+    width:100vw;
+    background:url(drum\ bg.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+h2{
+    margin-top:6%;
+    text-align: center;
+    text-decoration: underline;
+    color:white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
+.content{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:60px;
+    padding:7px;
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+
+}
+.boxes{
+    height:20vh;
+    width:94%;
+    top: 30vh;
+    position:relative;
+    margin:0 auto;
+    align:center;
+    border:0;
+    border-radius: 19px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.box{
+    border-radius:20px;
+    border:2px solid whitesmoke;
+    height:72%;
+    width:9.6%;
+    text-align: center;
+    background: linear-gradient(310deg, #f94dae 0%, #5a2389 50%, #3995d7 80%); 
+    transition:all 0.06s ease;
+}
+
+
+kbd{
+    display:block;
+    font-size:40px;
+    color:white;
+    text-decoration: underline;
+
+}
+span{
+    font-family:cursive;
+    font-size:30px;
+    color:chartreuse;
+}
+
+.playing{
+    border:4px solid red;
+    background-color:grey;
+    transform:scale(1.2);
+}
+@media(max-width:890px){
+    h2{
+        font-size: 30px;
+    }
+    
+    .content{
+    font-size:23px;
+    }
+    .boxes{
+        height:18vh;
+        width:94%;
+        top: 27vh;
+    }
+    .box{
+        border-radius:20px;
+        border:2px solid whitesmoke;
+        height:72%;
+        width:10%;
+        text-align: center;
+        background: linear-gradient(310deg, #f94dae 0%, #5a2389 50%, #3995d7 80%); 
+        transition:all 0.06s ease;
+    }
+    
+    
+    kbd{
+        
+        font-size:30px;
+        
+    
+    }
+    span{
+        
+        font-size:20px;
+        
+    }
+
+}
